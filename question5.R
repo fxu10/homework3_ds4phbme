@@ -27,5 +27,6 @@ names(restacked_dat) <- c("State","Year","Spending")
 
 ggplot(data=restacked_dat,aes(x=Year,y=Spending,group=State)) +
   geom_line(aes(color=State)) +
-  geom_point(aes(color=State))
+  geom_point(aes(color=State)) + 
+  theme(legend.position="bottom")
 
