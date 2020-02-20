@@ -1,3 +1,7 @@
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+library(tidyverse)
 rawdat <- readLines("healthcare-spending.csv")
 rawdat <- rawdat[3:56] # Manually remove some lines of text
 dat <- read.csv(text=rawdat,header=TRUE)

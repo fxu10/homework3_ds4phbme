@@ -1,3 +1,8 @@
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+library(tidyverse)
+
 dat <- read.table("classInterests.txt",header=TRUE)
 dat <- as.data.frame(dat)
 
@@ -27,3 +32,4 @@ freq_df <- rbind(freq_sop,freq_jun, freq_sen, freq_mas, freq_phd)
 
 ggplot(data=freq_df, aes(x=Year, y=Frequency, fill=Program)) +
   geom_bar(stat="identity") + ggtitle("Breakdown of Years by Program")
+
